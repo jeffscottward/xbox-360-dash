@@ -324,24 +324,25 @@ html, body, #dashboardwrapper {
   width: 100%;
   height: 100%;
   display: block;
+  overflow: hidden;
 }
 
-/* line 11, ../styles/style.sass */
+/* line 12, ../styles/style.sass */
 ul, ol {
   list-style: none;
 }
 
-/* line 14, ../styles/style.sass */
+/* line 15, ../styles/style.sass */
 #dashboardwrapper {
   background-color: #d5d8d9;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD5D8D9', endColorstr='#FFEFF1F1');
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d5d8d9), color-stop(12%, #d5d8d9), color-stop(35%, #bec0c0), color-stop(42%, #babcbc), color-stop(53%, #b8bbbb), color-stop(57%, #c5c6c6), color-stop(62%, #dcdddd), color-stop(65%, #e1e1e1), color-stop(68%, #dddede), color-stop(73%, #d4d6d6), color-stop(81%, #c2c3c3), color-stop(84%, #c0c2c2), color-stop(88%, #c5c7c7), color-stop(90%, #cacbcb), color-stop(90%, #cdcfcf), color-stop(91%, #cdcece), color-stop(92%, #d2d4d4), color-stop(93%, #d3d4d4), color-stop(94%, #d9dada), color-stop(94%, #d9dada), color-stop(100%, #eff1f1));
-  background-image: -webkit-linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 90%, #cdcfcf 90%, #cdcece 91%, #d2d4d4 92%, #d3d4d4 93%, #d9dada 94%, #d9dada 94%, #eff1f1 100%);
-  background-image: -moz-linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 90%, #cdcfcf 90%, #cdcece 91%, #d2d4d4 92%, #d3d4d4 93%, #d9dada 94%, #d9dada 94%, #eff1f1 100%);
-  background-image: -o-linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 90%, #cdcfcf 90%, #cdcece 91%, #d2d4d4 92%, #d3d4d4 93%, #d9dada 94%, #d9dada 94%, #eff1f1 100%);
-  background-image: -ms-linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 90%, #cdcfcf 90%, #cdcece 91%, #d2d4d4 92%, #d3d4d4 93%, #d9dada 94%, #d9dada 94%, #eff1f1 100%);
-  background-image: linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 90%, #cdcfcf 90%, #cdcece 91%, #d2d4d4 92%, #d3d4d4 93%, #d9dada 94%, #d9dada 94%, #eff1f1 100%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d5d8d9), color-stop(12%, #d5d8d9), color-stop(35%, #bec0c0), color-stop(42%, #babcbc), color-stop(53%, #b8bbbb), color-stop(57%, #c5c6c6), color-stop(62%, #dcdddd), color-stop(65%, #e1e1e1), color-stop(68%, #dddede), color-stop(73%, #d4d6d6), color-stop(81%, #c2c3c3), color-stop(84%, #c0c2c2), color-stop(88%, #c5c7c7), color-stop(100%, #cacbcb));
+  background-image: -webkit-linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 100%);
+  background-image: -moz-linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 100%);
+  background-image: -o-linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 100%);
+  background-image: -ms-linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 100%);
+  background-image: linear-gradient(top, #d5d8d9 0%, #d5d8d9 12%, #bec0c0 35%, #babcbc 42%, #b8bbbb 53%, #c5c6c6 57%, #dcdddd 62%, #e1e1e1 65%, #dddede 68%, #d4d6d6 73%, #c2c3c3 81%, #c0c2c2 84%, #c5c7c7 88%, #cacbcb 100%);
   background-size: cover;
 }
 /* line 21, ../styles/style.sass */
@@ -352,13 +353,20 @@ ul, ol {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
 }
-
 /* line 25, ../styles/style.sass */
+#dashboardwrapper .backdropTop {
+  position: absolute;
+  height: 65%;
+  width: 100%;
+  background: url("http://www.imgbase.info/images/safe-wallpapers/video_games/dead_space/12784_dead_space.jpg");
+}
+
+/* line 31, ../styles/style.sass */
 header {
   height: 100px;
 }
 
-/* line 28, ../styles/style.sass */
+/* line 34, ../styles/style.sass */
 #panels-area {
   max-width: 1000px;
   height: 600px;
@@ -366,30 +374,30 @@ header {
   position: relative;
 }
 
-/* line 34, ../styles/style.sass */
+/* line 40, ../styles/style.sass */
 .global-nav-list,
 .global-panel-list {
   padding: 0;
   margin: 0;
 }
 
-/* line 39, ../styles/style.sass */
+/* line 45, ../styles/style.sass */
 #global-nav {
   width: 1000px;
   position: absolute;
   left: 50%;
   margin-left: -500px;
 }
-/* line 45, ../styles/style.sass */
+/* line 51, ../styles/style.sass */
 #global-nav .global-nav-list {
   height: 80px;
 }
-/* line 48, ../styles/style.sass */
+/* line 54, ../styles/style.sass */
 #global-nav .global-nav-list .global-nav-list-item {
   display: inline-block;
   margin-right: 20px;
 }
-/* line 52, ../styles/style.sass */
+/* line 58, ../styles/style.sass */
 #global-nav .global-nav-list .global-nav-list-item .global-nav-list-item-link {
   display: inline-block;
   border-bottom: 0;
@@ -398,28 +406,29 @@ header {
   height: 40px;
   color: #838383;
   font-size: 20px;
+  font-family: "Exo", sans-serif;
 }
-/* line 60, ../styles/style.sass */
+/* line 67, ../styles/style.sass */
 #global-nav .global-nav-list .global-nav-list-item .global-nav-list-item-link:first-child {
   padding-left: 0;
 }
-/* line 62, ../styles/style.sass */
+/* line 69, ../styles/style.sass */
 #global-nav .global-nav-list .global-nav-list-item .global-nav-list-item-link.-active {
   color: white;
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* line 66, ../styles/style.sass */
+/* line 73, ../styles/style.sass */
 .global-panel-list {
   position: absolute;
   width: 15000px;
   height: 100%;
 }
-/* line 77, ../styles/style.sass */
+/* line 84, ../styles/style.sass */
 .global-panel-list[data-position='#bing'] {
   left: 0;
 }
-/* line 81, ../styles/style.sass */
+/* line 88, ../styles/style.sass */
 .global-panel-list[data-position='#bing'] #bing .tile-list {
   width: 100%;
   height: 100%;
@@ -427,11 +436,11 @@ header {
   margin: 0;
   top: 0;
 }
-/* line 77, ../styles/style.sass */
+/* line 84, ../styles/style.sass */
 .global-panel-list[data-position='#home'] {
   left: -1100px;
 }
-/* line 81, ../styles/style.sass */
+/* line 88, ../styles/style.sass */
 .global-panel-list[data-position='#home'] #home .tile-list {
   width: 100%;
   height: 100%;
@@ -439,11 +448,11 @@ header {
   margin: 0;
   top: 0;
 }
-/* line 77, ../styles/style.sass */
+/* line 84, ../styles/style.sass */
 .global-panel-list[data-position='#social'] {
   left: -2200px;
 }
-/* line 81, ../styles/style.sass */
+/* line 88, ../styles/style.sass */
 .global-panel-list[data-position='#social'] #social .tile-list {
   width: 100%;
   height: 100%;
@@ -451,11 +460,11 @@ header {
   margin: 0;
   top: 0;
 }
-/* line 77, ../styles/style.sass */
+/* line 84, ../styles/style.sass */
 .global-panel-list[data-position='#games'] {
   left: -3300px;
 }
-/* line 81, ../styles/style.sass */
+/* line 88, ../styles/style.sass */
 .global-panel-list[data-position='#games'] #games .tile-list {
   width: 100%;
   height: 100%;
@@ -463,11 +472,11 @@ header {
   margin: 0;
   top: 0;
 }
-/* line 77, ../styles/style.sass */
+/* line 84, ../styles/style.sass */
 .global-panel-list[data-position='#tv-movies'] {
   left: -4400px;
 }
-/* line 81, ../styles/style.sass */
+/* line 88, ../styles/style.sass */
 .global-panel-list[data-position='#tv-movies'] #tv-movies .tile-list {
   width: 100%;
   height: 100%;
@@ -475,11 +484,11 @@ header {
   margin: 0;
   top: 0;
 }
-/* line 77, ../styles/style.sass */
+/* line 84, ../styles/style.sass */
 .global-panel-list[data-position='#music'] {
   left: -5500px;
 }
-/* line 81, ../styles/style.sass */
+/* line 88, ../styles/style.sass */
 .global-panel-list[data-position='#music'] #music .tile-list {
   width: 100%;
   height: 100%;
@@ -487,11 +496,11 @@ header {
   margin: 0;
   top: 0;
 }
-/* line 77, ../styles/style.sass */
+/* line 84, ../styles/style.sass */
 .global-panel-list[data-position='#apps'] {
   left: -6600px;
 }
-/* line 81, ../styles/style.sass */
+/* line 88, ../styles/style.sass */
 .global-panel-list[data-position='#apps'] #apps .tile-list {
   width: 100%;
   height: 100%;
@@ -499,11 +508,11 @@ header {
   margin: 0;
   top: 0;
 }
-/* line 77, ../styles/style.sass */
+/* line 84, ../styles/style.sass */
 .global-panel-list[data-position='#settings'] {
   left: -7700px;
 }
-/* line 81, ../styles/style.sass */
+/* line 88, ../styles/style.sass */
 .global-panel-list[data-position='#settings'] #settings .tile-list {
   width: 100%;
   height: 100%;
@@ -511,7 +520,7 @@ header {
   margin: 0;
   top: 0;
 }
-/* line 88, ../styles/style.sass */
+/* line 95, ../styles/style.sass */
 .global-panel-list .global-panel-list-item {
   display: inline-block;
   vertical-align: top;
@@ -520,40 +529,40 @@ header {
   height: 600px;
   position: absolute;
 }
-/* line 99, ../styles/style.sass */
+/* line 106, ../styles/style.sass */
 .global-panel-list .global-panel-list-item#bing {
   left: 0;
 }
-/* line 99, ../styles/style.sass */
+/* line 106, ../styles/style.sass */
 .global-panel-list .global-panel-list-item#home {
   left: 1100px;
 }
-/* line 99, ../styles/style.sass */
+/* line 106, ../styles/style.sass */
 .global-panel-list .global-panel-list-item#social {
   left: 2200px;
 }
-/* line 99, ../styles/style.sass */
+/* line 106, ../styles/style.sass */
 .global-panel-list .global-panel-list-item#games {
   left: 3300px;
 }
-/* line 99, ../styles/style.sass */
+/* line 106, ../styles/style.sass */
 .global-panel-list .global-panel-list-item#tv-movies {
   left: 4400px;
 }
-/* line 99, ../styles/style.sass */
+/* line 106, ../styles/style.sass */
 .global-panel-list .global-panel-list-item#music {
   left: 5500px;
 }
-/* line 99, ../styles/style.sass */
+/* line 106, ../styles/style.sass */
 .global-panel-list .global-panel-list-item#apps {
   left: 6600px;
 }
-/* line 99, ../styles/style.sass */
+/* line 106, ../styles/style.sass */
 .global-panel-list .global-panel-list-item#settings {
   left: 7700px;
 }
 
-/* line 103, ../styles/style.sass */
+/* line 110, ../styles/style.sass */
 .tile-list {
   width: 85%;
   height: 85%;
@@ -562,7 +571,7 @@ header {
   position: relative;
   margin-top: -24%;
 }
-/* line 110, ../styles/style.sass */
+/* line 117, ../styles/style.sass */
 .tile-list::after {
   display: block;
   content: "";
@@ -574,7 +583,7 @@ header {
   -moz-box-shadow: gray 0px 50px 50px;
   box-shadow: gray 0px 50px 50px;
 }
-/* line 119, ../styles/style.sass */
+/* line 126, ../styles/style.sass */
 .tile-list .tile-item {
   background: #75bb3e;
   width: 25%;
@@ -583,22 +592,23 @@ header {
   float: left;
   border: 3px solid white;
 }
-/* line 127, ../styles/style.sass */
+/* line 134, ../styles/style.sass */
 .tile-list .tile-item:focus {
   background: blue;
 }
 
-/* line 130, ../styles/style.sass */
+/* line 137, ../styles/style.sass */
 .bingForm {
   width: 1000px;
 }
-/* line 132, ../styles/style.sass */
+/* line 139, ../styles/style.sass */
 .bingForm input {
   width: 100%;
   height: 20%;
+  padding: 0 5%;
   border-radius: 20px;
   border: none;
-  font-size: 150%;
+  font-size: 200%;
   color: black;
   position: absolute;
   left: 0;

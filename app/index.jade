@@ -11,54 +11,82 @@
 html.no-js(lang='en')
   //<![endif]
   head
+    link(href='http://fonts.googleapis.com/css?family=Exo:100,200,300,400,500', rel='stylesheet', type='text/css')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     title Xbox 360 :: jeffscottward
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width')
+    meta(name='description', content='XBOX 360 Dashboard by Jeff Scott Ward')
     link(rel='stylesheet', href='stylesheets/style.css')
     //-script(src='javascripts/vendor/modernizr-2.6.2.min.js')
+    meta(content='width=device-width, target-densitydpi=160, initial-scale=1.0', name='viewport')
+    //
+       For iPhone 4 with high-resolution Retina display:
+    link(href='/apple-touch-icon-114x114-precomposed.png', rel='apple-touch-icon-precomposed', sizes='114x114')
+    //
+       For first-generation iPad:
+    link(href='/apple-touch-icon-72x72-precomposed.png', rel='apple-touch-icon-precomposed', sizes='72x72')
+    //
+       For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
+    link(href='/apple-touch-icon-precomposed.png', rel='apple-touch-icon-precomposed')
+    //
+       For Nokia
+    link(href='/apple-touch-icon.png', rel='shortcut icon')
+    //
+       For everything else
+    link(href='/favicon.ico', rel='shortcut icon')
+    //
+       iOS. Delete if not required
+    meta(content='yes', name='apple-mobile-web-app-capable')
+    meta(content='black-translucent', name='apple-mobile-web-app-status-bar-style')
+    link(href='splash.png', rel='apple-touch-startup-image')
+    //
+       Microsoft. Delete if not required 
+    meta(content='on', http-equiv='cleartype')
+    meta(content='IE=edge,chrome=1', http-equiv='X-UA-Compatible')
+
   body.invisible
     #dashboardwrapper
+      .backdropTop
       header
         nav#global-nav
           ul.global-nav-list
             each i in links
               li.global-nav-list-item
-                if([i] != 'tv & movies')
-                  if([i] == 'home')
-                    a.global-nav-list-item-link.-active(href='##{[i]}')= [i]
+                if(i != 'tv & movies')
+                  if(i == 'home')
+                    a.global-nav-list-item-link.-active(href='##{i}')= i
                   else
-                    a.global-nav-list-item-link(href='##{[i]}')= [i]
-                else
-                  a.global-nav-list-item-link(href='#tv-movies')= [i]
+                    a.global-nav-list-item-link(href='##{i}')= i
+                if(i == 'tv & movies')
+                  a.global-nav-list-item-link(href='#tv-movies')= i
       section
         #panels-area
           ul.global-panel-list(data-position='#home')
             each i in links
-              if([i] === 'bing')
-                li.global-panel-list-item(id='#{[i]}')
+              if(i == 'bing')
+                li.global-panel-list-item(id='#{i}')
                   form#bingForm.bingForm(name='bingForm', action='bing.js', method='get')
                     input(type='text', name='bingSearchTerm', placeholder='search...')
-              if([i] != 'tv & movies' && [i] != 'home' )
-                li.global-panel-list-item(id='#{[i]}')
+              if(i != 'tv & movies' && i != 'home' && i != 'bing' )
+                li.global-panel-list-item(id='#{i}')
                   ul.tile-list
                     - for(i=1;i<=12;i++)
                       li.tile-item
               else
-                if([i] != 'tv & movies')
-                  li.global-panel-list-item.-active(id='#{[i]}')
+                if(i != 'tv & movies' && i != 'bing')
+                  li.global-panel-list-item.-active(id='#{i}')
                     ul.tile-list
-                      - for(j=1;j<=12;j++)
+                      - for(i=1;i<=12;i++)
                         li.tile-item
                 else
                   li.global-panel-list-item(id='tv-movies')
                     ul.tile-list
-                      - for(j=1;j<=12;j++)
-                        li.tile-item(tabindex='#{[j]}')
+                      - for(i=1;i<=12;i++)
+                        li.tile-item(tabindex='#{i}')
     script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
     script
       window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.2.min.js"><\\/script>')
+
 
     :coffeescript
       loc = window.location.href

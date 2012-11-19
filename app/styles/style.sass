@@ -7,6 +7,7 @@ html, body, #dashboardwrapper
   width: 100%
   height: 100%
   display: block
+  overflow: hidden
 
 ul, ol
   list-style: none
@@ -14,13 +15,18 @@ ul, ol
 #dashboardwrapper
   background-color: #d5d8d9
   +filter-gradient(#d5d8d9, #eff1f1, vertical)
-  +background-image(linear-gradient(top, #d5d8d9 0%,#d5d8d9 12%,#bec0c0 35%,#babcbc 42%,#b8bbbb 53%,#c5c6c6 57%,#dcdddd 62%,#e1e1e1 65%,#dddede 68%,#d4d6d6 73%,#c2c3c3 81%,#c0c2c2 84%,#c5c7c7 88%,#cacbcb 90%,#cdcfcf 90%,#cdcece 91%,#d2d4d4 92%,#d3d4d4 93%,#d9dada 94%,#d9dada 94%,#eff1f1 100%))
-  //background: url('http://media1.gameinformer.com/imagefeed/screenshots/News/NewsMediaGallery/matrix9.jpg')
+  +background-image(linear-gradient(top, #d5d8d9 0%,#d5d8d9 12%,#bec0c0 35%,#babcbc 42%,#b8bbbb 53%,#c5c6c6 57%,#dcdddd 62%,#e1e1e1 65%,#dddede 68%,#d4d6d6 73%,#c2c3c3 81%,#c0c2c2 84%,#c5c7c7 88%,#cacbcb 100%))
   background-size: cover
 
   *
     box-sizing: border-box
     +transition(all, 0.4s, ease)
+
+  .backdropTop
+    position: absolute
+    height: 65%
+    width: 100%
+    background: url('http://www.imgbase.info/images/safe-wallpapers/video_games/dead_space/12784_dead_space.jpg')
 
 header
   height: 100px
@@ -57,6 +63,7 @@ header
         height: $navHeight/2
         color: darken(darkgrey, 15%)
         font-size: 20px
+        font-family: 'Exo', sans-serif
         &:first-child
           padding-left: 0
         &.-active
@@ -132,9 +139,10 @@ header
   input
     width: 100%
     height: 20%
+    padding:  0 5%
     border-radius: 20px
     border: none
-    font-size: 150%
+    font-size: 200%
     color: black
     position: absolute
     left: 0
