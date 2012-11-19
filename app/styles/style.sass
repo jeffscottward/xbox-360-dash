@@ -1,0 +1,122 @@
+@import 'normalize'
+@import 'helpers'
+
+$panelsNum: 8
+$panelsWidth: 1000px
+
+*
+  box-sizing: border-box
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+
+html, body, #dashboardwrapper
+  width: 100%
+  height: 100%
+  display: block
+
+ul, ol
+  list-style: none
+
+#panels-area
+  max-width: $panelsWidth
+  height: 600px
+  //overflow: hidden
+  margin: auto
+  position: relative
+
+.global-nav-list
+.global-panel-list
+  padding: 0
+  margin: 0
+
+.global-nav-list-item
+  display: inline-block
+  margin-right: 20px
+
+.global-nav-list
+  height: 80px
+
+.global-nav-list-item-link
+  display: inline-block
+  border-bottom: 0
+  text-decoration: none
+  &.-active
+    border-bottom: 3px solid black
+
+.global-panel-list
+  position: absolute
+  width: $panelsNum * $panelsWidth
+  height: 100%
+  overflow: hidden
+
+.global-panel-list-item
+  display: inline-block
+  vertical-align: top
+  background: green
+  width: $panelsWidth
+  margin: auto
+  height: 600px
+  position: absolute
+
+.global-panel-list-item
+  &#bing
+    left: 0px
+    background: blue
+  &#home
+    left: 1000px
+    background: red
+  &#social
+    left: 2000px
+    background: green
+  &#games
+    left: 3000px
+    background: purple
+  &#tv-movies
+    left: 4000px
+    background: orange
+  &#music
+    left: 5000px
+    background: yellow
+  &#apps
+    left: 6000px
+    background: brown
+  &#settings
+    left: 7000px
+    background: black
+
+.global-panel-list
+  &[data-position]
+    position: absolute
+  &[data-position='#bing']
+    left: 0px
+  &[data-position='#home']
+    left: -1000px
+  &[data-position='#social']
+    left: -2000px
+  &[data-position='#games']
+    left: -3000px
+  &[data-position='#tv-movies']
+    left: -4000px
+  &[data-position='#music']
+    left: -5000px
+  &[data-position='#apps']
+    left: -6000px
+  &[data-position='#settings']
+    left: -7000px
+
+.tile-list
+  width: 100%
+  height: 100%
+  padding: 0
+  margin: 0
+  .tile-item
+    background: black
+    width: 25%
+    height: 33.3%
+    display: inline-block
+    float: left
+    border: 3px solid gray
+    &:focus
+      background: blue
