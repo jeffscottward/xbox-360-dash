@@ -1,15 +1,7 @@
+@import 'compass'
 @import 'normalize'
 @import 'helpers'
-
-$panelsNum: 8
-$panelsWidth: 1000px
-
-*
-  box-sizing: border-box
-  -webkit-transition: all 0.4s ease
-  -moz-transition: all 0.4s ease
-  -ms-transition: all 0.4s ease
-  -o-transition: all 0.4s ease
+@import 'mixin-vars'
 
 html, body, #dashboardwrapper
   width: 100%
@@ -18,6 +10,20 @@ html, body, #dashboardwrapper
 
 ul, ol
   list-style: none
+
+#dashboardwrapper
+  background-color: #d5d8d9
+  +filter-gradient(#d5d8d9, #eff1f1, vertical)
+  +background-image(linear-gradient(top, #d5d8d9 0%,#d5d8d9 12%,#bec0c0 35%,#babcbc 42%,#b8bbbb 53%,#c5c6c6 57%,#dcdddd 62%,#e1e1e1 65%,#dddede 68%,#d4d6d6 73%,#c2c3c3 81%,#c0c2c2 84%,#c5c7c7 88%,#cacbcb 90%,#cdcfcf 90%,#cdcece 91%,#d2d4d4 92%,#d3d4d4 93%,#d9dada 94%,#d9dada 94%,#eff1f1 100%))
+  //background: url('http://media1.gameinformer.com/imagefeed/screenshots/News/NewsMediaGallery/matrix9.jpg')
+  background-size: cover
+
+  *
+    box-sizing: border-box
+    +transition(all, 0.4s, ease)
+
+header
+  height: 100px
 
 #panels-area
   max-width: $panelsWidth
@@ -30,97 +36,107 @@ ul, ol
   padding: 0
   margin: 0
 
-.global-nav-list-item
-  display: inline-block
-  margin-right: 20px
+#global-nav
+  width: $panelsWidth
+  position: absolute
+  left: 50%
+  margin-left: -$panelsWidth/2
 
-.global-nav-list
-  height: 80px
+  .global-nav-list
+    height: $navHeight
 
-.global-nav-list-item-link
-  display: inline-block
-  border-bottom: 0
-  text-decoration: none
-  &.-active
-    border-bottom: 3px solid black
+    .global-nav-list-item
+      display: inline-block
+      margin-right: 20px
+
+      .global-nav-list-item-link
+        display: inline-block
+        border-bottom: 0
+        text-decoration: none
+        padding: $navHeight/2
+        height: $navHeight/2
+        color: darken(darkgrey, 15%)
+        font-size: 20px
+        &:first-child
+          padding-left: 0
+        &.-active
+          color: white
+          +text-shadow(1px 2px 3px hsla(0,0,0,.2))
 
 .global-panel-list
   position: absolute
   width: 15000px
   height: 100%
-  overflow: hidden
 
-.global-panel-list-item
-  display: inline-block
-  vertical-align: top
-  background: green
-  width: $panelsWidth
-  margin: auto
-  height: 600px
-  position: absolute
+  // Shift the whole panel container to
+  // avoid setting states individually
+  // for each panel based on which is
+  // already picked
+  $j: 0
+  @each $i in $panels
+    &[data-position='##{$i}']
+      left: 0 + $j
+      $j: $j - 1100px
+      ##{$i}
+        .tile-list
+          width: 100%
+          height: 100%
+          padding: 0
+          margin: 0
+          top: 0
 
-.global-panel-list-item
-  &#bing
-    left: 0px
-    background: blue
-  &#home
-    left: 1500px
-    background: red
-  &#social
-    left: 3000px
-    background: green
-  &#games
-    left: 4500px
-    background: purple
-  &#tv-movies
-    left: 6000px
-    background: orange
-  &#music
-    left: 7500px
-    background: yellow
-  &#apps
-    left: 9000px
-    background: brown
-  &#settings
-    left: 10500px
-    background: black
-
-
-// Shift the whole panel container to
-// avoid setting states individually
-// for each panel based on which is
-// already picked
-.global-panel-list
-  &[data-position]
+  .global-panel-list-item
+    display: inline-block
+    vertical-align: top
+    width: $panelsWidth
+    margin: auto
+    height: 600px
     position: absolute
-  &[data-position='#bing']
-    left: 0px
-  &[data-position='#home']
-    left: -1500px
-  &[data-position='#social']
-    left: -3000px
-  &[data-position='#games']
-    left: -4500px
-  &[data-position='#tv-movies']
-    left: -6000px
-  &[data-position='#music']
-    left: -7500px
-  &[data-position='#apps']
-    left: -9000px
-  &[data-position='#settings']
-    left: -10500px
+
+    // Assign original positions in the container
+    $j: 0
+    @each $i in $panels
+      &##{$i}
+        left: 0 + $j
+      $j: $j + 1100px
 
 .tile-list
-  width: 100%
-  height: 100%
-  padding: 0
-  margin: 0
+  width: 85%
+  height: 85%
+  margin: auto
+  top: 50%
+  position: relative
+  margin-top: -24%
+  &::after
+    display: block
+    content: ''
+    width: 100%
+    height: 20px
+    position: absolute
+    bottom: 0
+    +box-shadow(rgba(gray, 1) 0px 50px 50px)
+
   .tile-item
-    background: black
+    background: $baseTileColor
     width: 25%
     height: 33.3%
     display: inline-block
     float: left
-    border: 3px solid gray
+    border: 3px solid white
+
     &:focus
       background: blue
+
+.bingForm
+  width: $panelsWidth
+  input
+    width: 100%
+    height: 20%
+    border-radius: 20px
+    border: none
+    font-size: 150%
+    color: black
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -10%

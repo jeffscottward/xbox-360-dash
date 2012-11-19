@@ -16,7 +16,7 @@ html.no-js(lang='en')
     title Xbox 360 :: jeffscottward
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width')
-    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='stylesheets/style.css')
     //-script(src='javascripts/vendor/modernizr-2.6.2.min.js')
   body.invisible
     #dashboardwrapper
@@ -36,6 +36,10 @@ html.no-js(lang='en')
         #panels-area
           ul.global-panel-list(data-position='#home')
             each i in links
+              if([i] === 'bing')
+                li.global-panel-list-item(id='#{[i]}')
+                  form#bingForm.bingForm(name='bingForm', action='bing.js', method='get')
+                    input(type='text', name='bingSearchTerm', placeholder='search...')
               if([i] != 'tv & movies' && [i] != 'home' )
                 li.global-panel-list-item(id='#{[i]}')
                   ul.tile-list
@@ -56,45 +60,31 @@ html.no-js(lang='en')
     script
       window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.2.min.js"><\\/script>')
 
+    :coffeescript
+      loc = window.location.href
+      $(document).ready ->
 
-    script
+        # CLEAN URL HASH AND CANCEL FOUT
+        URLindex = loc.indexOf("#")
+        window.location = loc.substring(0, URLindex)  if URLindex > 0
+        $("body").removeClass "invisible"
 
-      var loc = window.location.href;
+        # NAVIGATION
+        $(".global-nav-list-item-link").click (e) ->
+          thisID = $(this).attr("href")
+          $(".global-nav-list-item-link").removeClass "-active"
+          $(this).addClass "-active"
+          thisID = "tv-movies"  if thisID is "tv & movies"
+          $(".global-panel-list-item").removeClass("-active").filter(thisID).toggleClass "-active"
+          $(".global-panel-list-item").parent().attr "data-position", thisID
+          e.preventDefault()
 
-      $(document).ready(function(){
-        // CLEAN URL HASH AND CANCEL FOUT
-        var URLindex = loc.indexOf('#');
-        if (URLindex > 0) {
-          window.location = loc.substring(0, URLindex);
-        }
-        $('body').removeClass('invisible');
+        $(window).keypress (event) ->
+          currentPanel = $(".global-panel-list").attr("data-position")
+          $(".global-nav-list").find("li a[href=" + currentPanel + "]").parent().prev().find("a").trigger "click"  if event.which is 91
+          $(".global-nav-list").find("li a[href=" + currentPanel + "]").parent().next().find("a").trigger "click"  if event.which is 93
 
-        // NAVIGATION
-        $('.global-nav-list-item-link').click(function(e){
-          var thisID = $(this).attr('href');
-          $('.global-nav-list-item-link').removeClass('-active');
-          $(this).addClass('-active');
-          if (thisID == 'tv & movies'){
-            thisID = 'tv-movies';
-          }
-          $('.global-panel-list-item').removeClass('-active')
-                                      .filter(thisID)
-                                      .toggleClass('-active');
-          $('.global-panel-list-item').parent().attr('data-position', thisID);
-          e.preventDefault();
-        });
 
-        $(window).keypress(function(event) {
-          var currentPanel = $('.global-panel-list').attr('data-position');
-          if (event.which == 91) {
-            $('.global-nav-list').find('li a[href=' + currentPanel + ']').parent().prev().find('a').trigger('click')
-          }
-          if (event.which == 93) {
-            $('.global-nav-list').find('li a[href=' + currentPanel + ']').parent().next().find('a').trigger('click')
-          }
-        });
-
-      });
 
 
 
