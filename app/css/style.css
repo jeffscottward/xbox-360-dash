@@ -1,1 +1,496 @@
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}body,button,input,select,textarea{font-family:sans-serif}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}pre,code,kbd,samp{font-family:monospace,serif;_font-family:"Courier New",monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:"";content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}ul,ol{margin-left:0;padding:0 0 0 40px}dd{margin:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type='button'],input[type='reset'],input[type='submit']{cursor:pointer;-webkit-appearance:button;*overflow:visible}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}.ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}.ir:before{content:"";display:block;width:0;height:100%}.hidden{display:none !important;visibility:hidden}.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.invisible{visibility:hidden}.clearfix{*zoom:1}.clearfix:before{content:" ";display:table}.clearfix:after{content:" ";display:table;clear:both}*{box-sizing:border-box;-webkit-transition:all 0.4s ease;-moz-transition:all 0.4s ease;-ms-transition:all 0.4s ease;-o-transition:all 0.4s ease}html,body,#dashboardwrapper{width:100%;height:100%;display:block}ul,ol{list-style:none}#panels-area{max-width:1000px;height:600px;margin:auto;position:relative}.global-panel-list{padding:0;margin:0}.global-nav-list-item{display:inline-block;margin-right:20px}.global-nav-list{height:80px}.global-nav-list-item-link{display:inline-block;border-bottom:0;text-decoration:none}.global-nav-list-item-link.-active{border-bottom:3px solid #000}.global-panel-list{position:absolute;width:8000px;height:100%;overflow:hidden}.global-panel-list-item{display:inline-block;vertical-align:top;background:green;width:1000px;margin:auto;height:600px;position:absolute}.global-panel-list-item#bing{left:0px;background:blue}.global-panel-list-item#home{left:1000px;background:red}.global-panel-list-item#social{left:2000px;background:green}.global-panel-list-item#games{left:3000px;background:purple}.global-panel-list-item#tv-movies{left:4000px;background:orange}.global-panel-list-item#music{left:5000px;background:#ff0}.global-panel-list-item#apps{left:6000px;background:brown}.global-panel-list-item#settings{left:7000px;background:#000}.global-panel-list[data-position]{position:absolute}.global-panel-list[data-position='#bing']{left:0px}.global-panel-list[data-position='#home']{left:-1000px}.global-panel-list[data-position='#social']{left:-2000px}.global-panel-list[data-position='#games']{left:-3000px}.global-panel-list[data-position='#tv-movies']{left:-4000px}.global-panel-list[data-position='#music']{left:-5000px}.global-panel-list[data-position='#apps']{left:-6000px}.global-panel-list[data-position='#settings']{left:-7000px}.tile-list{width:100%;height:100%;padding:0;margin:0}.tile-list .tile-item{background:#000;width:25%;height:33.3%;display:inline-block;float:left;border:3px solid gray}.tile-list .tile-item:focus{background:blue}
+/* line 7, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 11, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 17, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 22, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+[hidden] {
+  display: none;
+}
+
+/* line 28, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 42, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+body {
+  margin: 0;
+}
+
+/* line 46, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+body, button, input, select, textarea {
+  font-family: sans-serif;
+}
+
+/* line 54, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+a:focus {
+  outline: thin dotted;
+}
+/* line 59, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 66, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+h1 {
+  font-size: 2em;
+}
+
+/* line 70, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 74, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 77, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+blockquote {
+  margin: 1em 40px;
+}
+
+/* line 81, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+dfn {
+  font-style: italic;
+}
+
+/* line 85, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+mark {
+  background: yellow;
+  color: black;
+}
+
+/* line 91, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+pre, code, kbd, samp {
+  font-family: monospace, serif;
+  _font-family: "Courier New", monospace;
+  font-size: 1em;
+}
+
+/* line 97, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 102, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+q {
+  quotes: none;
+}
+/* line 107, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 111, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+small {
+  font-size: 75%;
+}
+
+/* line 116, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 122, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+sup {
+  top: -0.5em;
+}
+
+/* line 125, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 131, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+ul, ol {
+  margin-left: 0;
+  padding: 0 0 0 40px;
+}
+
+/* line 135, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/* line 139, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* line 146, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 155, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 162, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+figure {
+  margin: 0;
+}
+
+/* line 169, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+form {
+  margin: 0;
+}
+
+/* line 173, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 178, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+legend {
+  border: 0;
+  *margin-left: -7px;
+}
+
+/* line 185, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+/* line 197, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+button, input {
+  line-height: normal;
+}
+
+/* line 200, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+button, input[type='button'], input[type='reset'], input[type='submit'] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+
+/* line 212, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+/* line 219, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 229, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 234, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 238, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 249, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_normalize.sass */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ==========================================================================
+ * Helper classes
+ * ========================================================================== */
+/* Image replacement */
+/* line 8, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+/* line 14, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+/* line 23, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/* line 30, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 40, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+/* Hide visually and from screenreaders, but maintain layout */
+/* line 55, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.invisible {
+  visibility: hidden;
+}
+
+/* Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements. */
+/* line 69, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.clearfix {
+  *zoom: 1;
+}
+/* line 70, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.clearfix:before {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 75, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/_helpers.sass */
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+  clear: both;
+}
+
+/* For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats. */
+/* line 7, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+* {
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+
+/* line 14, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+html, body, #dashboardwrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* line 19, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+ul, ol {
+  list-style: none;
+}
+
+/* line 22, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+#panels-area {
+  max-width: 1000px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+}
+
+/* line 28, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-nav-list,
+.global-panel-list {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 33, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-nav-list-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* line 37, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-nav-list {
+  height: 80px;
+}
+
+/* line 40, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-nav-list-item-link {
+  display: inline-block;
+  border-bottom: 0;
+  text-decoration: none;
+}
+/* line 44, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-nav-list-item-link.-active {
+  border-bottom: 3px solid black;
+}
+
+/* line 47, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list {
+  position: absolute;
+  width: 15000px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 53, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item {
+  display: inline-block;
+  vertical-align: top;
+  background: green;
+  width: 1000px;
+  margin: auto;
+  height: 600px;
+  position: absolute;
+}
+
+/* line 63, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item#bing {
+  left: 0px;
+  background: blue;
+}
+/* line 66, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item#home {
+  left: 1500px;
+  background: red;
+}
+/* line 69, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item#social {
+  left: 3000px;
+  background: green;
+}
+/* line 72, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item#games {
+  left: 4500px;
+  background: purple;
+}
+/* line 75, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item#tv-movies {
+  left: 6000px;
+  background: orange;
+}
+/* line 78, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item#music {
+  left: 7500px;
+  background: yellow;
+}
+/* line 81, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item#apps {
+  left: 9000px;
+  background: brown;
+}
+/* line 84, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list-item#settings {
+  left: 10500px;
+  background: black;
+}
+
+/* line 94, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position] {
+  position: absolute;
+}
+/* line 96, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position='#bing'] {
+  left: 0px;
+}
+/* line 98, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position='#home'] {
+  left: -1500px;
+}
+/* line 100, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position='#social'] {
+  left: -3000px;
+}
+/* line 102, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position='#games'] {
+  left: -4500px;
+}
+/* line 104, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position='#tv-movies'] {
+  left: -6000px;
+}
+/* line 106, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position='#music'] {
+  left: -7500px;
+}
+/* line 108, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position='#apps'] {
+  left: -9000px;
+}
+/* line 110, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.global-panel-list[data-position='#settings'] {
+  left: -10500px;
+}
+
+/* line 113, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.tile-list {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* line 118, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.tile-list .tile-item {
+  background: black;
+  width: 25%;
+  height: 33.3%;
+  display: inline-block;
+  float: left;
+  border: 3px solid gray;
+}
+/* line 125, /Users/jeffscottward/Documents/Development/Projects/xbox-360-dash/app/styles/style.sass */
+.tile-list .tile-item:focus {
+  background: blue;
+}

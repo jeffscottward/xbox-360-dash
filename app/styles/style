@@ -22,6 +22,7 @@ ul, ol
 #panels-area
   max-width: $panelsWidth
   height: 600px
+  //overflow: hidden
   margin: auto
   position: relative
 
@@ -46,7 +47,7 @@ ul, ol
 
 .global-panel-list
   position: absolute
-  width: 15000px
+  width: $panelsNum * $panelsWidth
   height: 100%
   overflow: hidden
 
@@ -64,51 +65,37 @@ ul, ol
     left: 0px
     background: blue
   &#home
-    left: 1500px
+    left: 1000px
     background: red
   &#social
-    left: 3000px
+    left: 2000px
     background: green
   &#games
-    left: 4500px
+    left: 3000px
     background: purple
   &#tv-movies
-    left: 6000px
+    left: 4000px
     background: orange
   &#music
-    left: 7500px
+    left: 5000px
     background: yellow
   &#apps
-    left: 9000px
+    left: 6000px
     background: brown
   &#settings
-    left: 10500px
+    left: 7000px
     background: black
 
+$basePosition: 1000px
+$basePositionIncrementAmount: 1000px
+$i: 1
 
-// Shift the whole panel container to
-// avoid setting states individually
-// for each panel based on which is
-// already picked
 .global-panel-list
-  &[data-position]
-    position: absolute
-  &[data-position='#bing']
-    left: 0px
-  &[data-position='#home']
-    left: -1500px
-  &[data-position='#social']
-    left: -3000px
-  &[data-position='#games']
-    left: -4500px
-  &[data-position='#tv-movies']
-    left: -6000px
-  &[data-position='#music']
-    left: -7500px
-  &[data-position='#apps']
-    left: -9000px
-  &[data-position='#settings']
-    left: -10500px
+  @for $i from 1 through 8
+    &[data-position]:nth-child(#{$i})
+      position: absolute
+      left: $basePosition -($basePositionIncrementAmount * $i)
+
 
 .tile-list
   width: 100%
